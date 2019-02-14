@@ -15,8 +15,9 @@ import Myyform from "./src/secForm";
 // import Secform from "./src/ourForm"
 import { Provider } from "react-redux";
 import DatePicker from "react-native-datepicker";
+import {connect} from 'react-redux'
 
-export default class App extends Component {
+ class render extends Component {
   constructor() {
     super();
     this.state = { date: "2016-05-15", bgColor: true, genColor : true };
@@ -154,6 +155,13 @@ export default class App extends Component {
     );
   }
 }
+function mapStateToProps(state){
+    return{
+        st = state.st
+    }
+}
+
+export default connect(mapStateToProps)(render)
 
 const styles = StyleSheet.create({
   container: {

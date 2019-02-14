@@ -10,11 +10,15 @@ const email = value =>
 const validate = values => {
   const errors = {};
   if (!values.password) {
-    errors.password = "please fill the valid email and password ";
+    errors.password = "please fill the password ";
   } else if (values.password.length > 25) {
     errors.password = "max letter 25";
   }
-
+  if (!values.email) {
+    errors.email = "please fill the valid email  ";
+  } else if (values.email.length > 25) {
+    errors.email = "max letter 25";
+  }
   return errors;
 };
 const myFields = ({

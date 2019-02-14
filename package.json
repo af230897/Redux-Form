@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "native-base": "^2.11.0",
+    "prop-types": "^15.7.1",
     "react": "16.6.3",
     "react-native": "0.58.4",
     "react-native-datepicker": "^1.7.2",
